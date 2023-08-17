@@ -1,0 +1,36 @@
+  <!--For Group-->
+<form [formGroup]="userForm">
+
+    <label for="first-name">First Name: </label>
+    <input id="first-name" type="text" formControlName="firstName">
+  
+    <label for="last-name">Last Name: </label>
+    <input id="last-name" type="text" formControlName="lastName">
+  
+    <!--Event Binding-->
+    <button (click)="onSubmit()" type="submit">Submit</button>
+  </form>
+
+  <!--For Loop-->
+  <div *ngFor="let location of locations">
+    <p>{{location.name}}</p>
+    <!--If else-->
+    <ng-container *ngIf="location.id == 2; else noLocation">
+     <h1>Found</h1>
+    </ng-container>
+    <ng-template #noLocation>
+      <h1>Not found</h1>
+    </ng-template>
+  </div>
+
+    <!--Two way binding-->
+  User Name: <input type="text" [(ngModel)]="userName"  ><br/>
+  {{userName}}
+
+    <!--Weather Forcast For Loop-->
+    <div *ngFor="let weatherForecast of weatherForecasts">
+      <p>{{weatherForecast.summary}}</p>
+    </div>
+
+<!--Property Binding-->
+  <!-- <img alt="item" [src]="itemImageUrl"> -->
