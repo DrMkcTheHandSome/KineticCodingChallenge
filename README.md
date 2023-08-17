@@ -13,3 +13,5 @@ Basic Angular Implementation
 5. Event Binding
 6. Two way binding
 7. Property Binding
+8. NgFor 
+9. NgIf
